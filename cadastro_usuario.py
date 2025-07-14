@@ -2,42 +2,51 @@ while True:
     nome = input("Informe seu nome de usuário: ")
     
     if  len(nome) >= 3:
-        print("O nome deve conter mais de 3 caracteres")
+        break
     else:
-        print("Usuário correto!")
+        print("ERRO: o nome deve conter pelo menos 3 caracteres")
+        
+        
+while True:        
 
     idade = int(input("Informe sua idade: "))
     
     if idade > 0 and idade <= 150:
-        print("Idade correta")
+        break
+    else:
+        print("Idade inválida. A idade deve ser entre 0 e 150")
         
+        
+while True:
+         
     salario = float(input("Informe seu salário: "))
     
-    if salario < 0:
-        print("O salário deve ser um valor maior que 0. Tente novamente")
-        continue
+    if salario > 0:
+        break
     else:
-        print("O salário é um valor maior que 0!")
+        print("O salário deve ser maior que 0!")
         
-    genero = bool(input("Informe seu gênero. Pressione F para Feminino, M para Masculino e O para outros: "))
+while True:   
+    genero = input("Informe seu gênero. Pressione F para Feminino, M para Masculino e O para outros: ").upper()
     
-    if genero in ["F", "M", "Outros"]:
-        print("Gênero Registrado: {genero}")
+    if genero in ["F", "M", "O"]:
+        break
         
     else:
         print("Caractere errado. Informe novamente")
         
-    estado_civil = input("Informe seu estado civil: ")
-    
+while True:
+    estado_civil = input("Informe seu estado civil (S-Solteiro, C-Casado, V-Viúvo, D-Divorciado): ").upper()
     if estado_civil in ["S", "C", "V", "D"]:
-        print("Estado civil: {genero}")
+        break
     else:
-        print("Estado civil: {estado_civil}")
+        print("Opção inválida. Informe S, C, V ou D.\n")
         
-    break
-    
-    
+print("Informações dadas: \n")
+print(f"Nome: {nome}")
+print(f"Idade: {idade}")
+print(f"Salário: {salario}")
+print(f"Gênero: {genero}")
+print(f"Estado civil: {estado_civil}")
 
 
-        
-    
